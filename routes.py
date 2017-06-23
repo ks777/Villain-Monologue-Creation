@@ -6,6 +6,7 @@
 
 from flask import Flask, url_for, request, render_template
 from app import app
+import weaponcreation
 
 #initial page/server-side interaction
 @app.route('/')
@@ -27,17 +28,9 @@ def create():
         return render_template('CreateQuestion.html')
     elif request.method == 'POST':
         answer = request.form['title']
-        return render_template('createdquestion.html')
+        finish = weaponcreation.creation_generation(answer)
+        return render_template('CreatedQuestion.html', finish = finish)
     else:
         return "<h2>This is what you see when we create a page!</h2>"
 
-#last page
-@app.route('/finale/<title>')
-def finale(title):
-    if request.method == 'GET':
-        return render_template('AnswerQuestion.html')
-    elif request.method == 'POST':
-        return 'This is the last page'      
-    else:
-        return '<h2>Invalid Request<h2>'
     
