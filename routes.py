@@ -11,6 +11,7 @@ import weaponcreation
 #initial page/server-side interaction
 @app.route('/')
 def commence():
+    #expect to make an html file for the first page like the rest.
     createLink = "<a href = '" + url_for('create') + "'>Proceed to the Demonstrator Fabricator Generator!</a>"
     return """<html>
                 <head>

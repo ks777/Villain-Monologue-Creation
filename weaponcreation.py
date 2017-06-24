@@ -27,61 +27,55 @@ weapon = ['mechanism', 'rocket launcher', 'shiv', 'warpinator', 'predator launch
 
 #this should reveal the first letter of the user input
 #need to check if first letter isnt a letter
-def creation_generation(word):      #This was made for python originally in mind. attempting to convert to flask framework/html format
-    name = word.lower()
-    while True:         #important
-        if name[0].isalpha() == True:
-            good_input = name
-            good_letter = name[0]
-            break
-        elif " " in name[0]:
-            return("Incorrect usage of the program, you imbecile.\nYou must have placed a space in front of the program!\nI`ll forgive you this time, moron.\nSo do it correctly!")
-            break
-        else:
-            return("Incorrect usage of the program, you imbecile.\nWhat!?!\nYou placed a number/special character in an adjective-only program!?!?\nI`ve thought i told you a thousand times what an adjective is!!!\nNow do it correctly!")   #For loop to detect usable words
-            break
-    my_list = []
-    for item in usable_words:   #though this means i can just make 1 big list instead of 26 smaller ones  
-        if item[0] in good_letter:
-            selecting = set([item])     #sets the selected words from the list and turns it into a list
-            my_list.append(item)    
-    z = random.choice(my_list) #the randonmess begins and works
-    random_number = [1,2,3,4,5,6,7,8,9,10]
-    random_output = []
-    sentence = random.choice(random_number)
-    random_output.append(sentence)
-    fixing = random.choice(weapon) #important
-    for x in list(random_output):
-        if x == 1:
-            return("Introducing the most %s weapon in our arsenal. One that strikes fear to those would would stand in its presence. I present to you our %s %s!" %(name,z,fixing))
-            break
-        elif x == 2:
-            return("While I could show off our most %s device in our catalog, my %s %s would simply atomimize you on the spot. and where`s the fun in that?" %(name,z,fixing))
-            break
-        elif x == 3:
-            return("Behold before you, the illustrious, the %s, the %s power that is my %s!" %(name,z,fixing))
-            break
-        elif x == 4:
-            return("We`ve broken around 54 federal rules to create such an %s device, but watching the %s carnage this %s creates will be well worth it." %(name,z,fixing))
-            break
-        elif x == 5:
-            return("You think this is some sort of game??? How dare you mock me while I`m calibrating my %s, %s %s!" %(name,z,fixing))
-            break
-        elif x == 6:
-            return("It took the souls of thousands to construct what might be the most %s and %s %s to have possibly ever been created by man!" %(name,z,fixing))
-            break
-        elif x == 7:
-            return("NO MORE GAMES! If my %s, %s %s can`t destroy you, then we`ll see if the city is as durable!" %(name,z,fixing))
-            break
-        elif x == 8:
-            return("When they told me I could never build the most %s contraption with a hint of %s, they were right. So I just made a %s." %(name,z,fixing))
-            break
-        elif x == 9:
-            return("The time has come to wipe this %s humanity from the face of this earth! Let our mighty army and the %s power of my own %s be the intrument of their demise!" %(name,z,fixing))
-            break
-        else:
-            return("LET MY NEW DOMINION RISE! The age of my %s might has begun! Equip those who serve with our %s %s as we take the fortress and bring death upon its doorsteps!" %(name,z,fixing))
-            break
+def creation_generation(word): #This was made for python originally in mind. attempting to convert to flask framework/html format
+    try:
+        name = word.lower()
+        while True:         #important
+            if name[0].isalpha() == True:
+                good_input = name
+                good_letter = name[0]
+                break
+            elif " " in name[0]:
+                return("Incorrect usage of the program, you imbecile!!!\nYou must have placed a space in front of the program!\nI`ll forgive you this time, moron.\nSo do it correctly!")
+                break
+            else:
+                return("Incorrect usage of the program, you imbecile!!!\nWhat!?!\nYou placed a number/special character in an adjective-only program!?!?\nI`ve thought i told you a thousand times what an adjective is!!!\nNow do it correctly!")   #For loop to detect usable words
+                break
+        my_list = []
+        for item in usable_words:   #though this means i can just make 1 big list instead of 26 smaller ones
+            if item is not usable_words:
+                if item[0] in good_letter:
+                    selecting = set([item])     #sets the selected words from the list and turns it into a list
+                    my_list.append(item)    
+        z = random.choice(my_list) #the randonmess begins and works
+        random_number = [1,2,3,4,5,6,7,8,9,10]
+        random_output = []
+        sentence = random.choice(random_number)
+        random_output.append(sentence)
+        fixing = random.choice(weapon) #important
+        for x in list(random_output):
+            if x == 1:
+                return("Introducing the most %s weapon in our arsenal. One that strikes fear to those would would stand in its presence. I present to you our %s %s!" %(name,z,fixing))
+            elif x == 2:
+                return("While I could show off our most %s device in our catalog, my %s %s would simply atomimize you on the spot. and where`s the fun in that?" %(name,z,fixing))
+            elif x == 3:
+                return("Behold before you, the illustrious, the %s, the %s power that is my %s!" %(name,z,fixing))
+            elif x == 4:
+                return("We`ve broken around 54 federal rules to create such an %s device, but watching the %s carnage this %s creates will be well worth it." %(name,z,fixing))
+            elif x == 5:
+                return("You think this is some sort of game??? How dare you mock me while I`m calibrating my %s, %s %s!" %(name,z,fixing))
+            elif x == 6:
+                return("It took the souls of thousands to construct what might be the most %s and %s %s to have possibly ever been created by man!" %(name,z,fixing))
+            elif x == 7:
+                return("NO MORE GAMES! If my %s, %s %s can`t destroy you, then we`ll see if the city is as durable!" %(name,z,fixing))
+            elif x == 8:
+                return("When they told me I could never build the most %s contraption with a hint of %s, they were right. So I just made a %s." %(name,z,fixing))
+            elif x == 9:
+                return("The time has come to wipe this %s humanity from the face of this earth! Let our mighty army and the %s power of my own %s be the intrument of their demise!" %(name,z,fixing))
+            else:
+                return("LET MY NEW DOMINION RISE! The age of my %s might has begun! Equip those who serve with our %s %s as we take the fortress and bring death upon its doorsteps!" %(name,z,fixing))
+    except IndexError:
+        return("ENTER SOMETHING YOU MORON!")
 
-        
             
+                
