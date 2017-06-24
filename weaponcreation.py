@@ -27,16 +27,19 @@ weapon = ['mechanism', 'rocket launcher', 'shiv', 'warpinator', 'predator launch
 
 #this should reveal the first letter of the user input
 #need to check if first letter isnt a letter
-def creation_generation(name):      #This was made for python originally in mind. attempting to convert to flask framework/html format
+def creation_generation(word):      #This was made for python originally in mind. attempting to convert to flask framework/html format
+    name = word.lower()
     while True:         #important
         if name[0].isalpha() == True:
             good_input = name
             good_letter = name[0]
             break
         elif " " in name[0]:
-            print("Incorrect usage of the program, you imbecile.\nYou must have placed a space in front of the program!\nI`ll forgive you this time, moron.\nSo do it correctly!")
+            return("Incorrect usage of the program, you imbecile.\nYou must have placed a space in front of the program!\nI`ll forgive you this time, moron.\nSo do it correctly!")
+            break
         else:
-            print("Incorrect usage of the program, you imbecile.\nWhat!?!\nYou placed a number in an adjective-only program!?!?\nI`ve thought i told you a thousand times what an adjective is!!!\nNow do it correctly!")   #For loop to detect usable words 
+            return("Incorrect usage of the program, you imbecile.\nWhat!?!\nYou placed a number/special character in an adjective-only program!?!?\nI`ve thought i told you a thousand times what an adjective is!!!\nNow do it correctly!")   #For loop to detect usable words
+            break
     my_list = []
     for item in usable_words:   #though this means i can just make 1 big list instead of 26 smaller ones  
         if item[0] in good_letter:
