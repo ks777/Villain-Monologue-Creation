@@ -12,15 +12,7 @@ import weaponcreation
 @app.route('/')
 def commence():
     #expect to make an html file for the first page like the rest.
-    createLink = "<a href = '" + url_for('create') + "'>Proceed to the Demonstrator Fabricator Generator!</a>"
-    return """<html>
-                <head>
-                    <title>Welcome to the Villianous Sentence Creation Station!</title>
-                </head>
-                <body>
-                    """ + createLink + """
-                </body>
-              </html>"""
+    return render_template('AnswerQuestion.html')
 
 #second page
 @app.route('/GeneratePhrase', methods = ['GET', 'POST'])
@@ -32,6 +24,8 @@ def create():
         finish = weaponcreation.creation_generation(answer)
         return render_template('CreatedQuestion.html', finish = finish)
     else:
-        return "<h2>This is what you see when we create a page!</h2>"
+        shutdown_server()
+        return('Server Shutting down...')
+    
 
     

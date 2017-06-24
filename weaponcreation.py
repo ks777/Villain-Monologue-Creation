@@ -43,11 +43,18 @@ def creation_generation(word): #This was made for python originally in mind. att
                 break
         my_list = []
         for item in usable_words:   #though this means i can just make 1 big list instead of 26 smaller ones
-            if item is not usable_words:
                 if item[0] in good_letter:
                     selecting = set([item])     #sets the selected words from the list and turns it into a list
-                    my_list.append(item)    
+                    my_list.append(item)
+        #the user input and first choice might still be the same. only thing to fix really
         z = random.choice(my_list) #the randonmess begins and works
+        #while loop to make sure the user input and the randomly,selected adjective aren`t the same
+        while True:
+            if name == z:
+                z = random.choice(my_list)
+                continue
+            else:
+                break
         random_number = [1,2,3,4,5,6,7,8,9,10]
         random_output = []
         sentence = random.choice(random_number)
@@ -74,7 +81,7 @@ def creation_generation(word): #This was made for python originally in mind. att
                 return("The time has come to wipe this %s humanity from the face of this earth! Let our mighty army and the %s power of my own %s be the intrument of their demise!" %(name,z,fixing))
             else:
                 return("LET MY NEW DOMINION RISE! The age of my %s might has begun! Equip those who serve with our %s %s as we take the fortress and bring death upon its doorsteps!" %(name,z,fixing))
-    except IndexError:
+    except IndexError:  #In case i get the greatest gift of all: NOTHING!!!!!!
         return("ENTER SOMETHING YOU MORON!")
 
             
