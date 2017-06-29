@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en" xmlns = "http://www.w3.org/1999/xhtml">
 <meta http-equiv ="Content-type" content="text/html;charset=utf-8">
+<img src = "/static/images/heartless.png" />
 <head>
 	<link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
 	<meta charset = "utf-8" />
@@ -10,7 +11,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 	.bg-1{
-		background-image: url('/static/images/test.jpg');
+		background-image: url('/static/images/blackhole.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		-webkit-background-size: cover;
@@ -21,7 +22,6 @@
 	.h1{
 	position: relative;
 	right: 10px;
-	padding-top: 250px;
 	}
 	
 	.h2{
@@ -39,11 +39,11 @@
 	<div class = "h2">
 	<form method = "get">
 		<div>
-			 <a href = {{url_for('create')}}> Proceed to the Demonstrator Fabricator Generator! </a> <br>
+			 <b><a href = {{url_for('create')}} style = "color: #7B1C1C"> Proceed to the Demonstrator Fabricator Generator! </a></b> <br>
 		</div>
 	</div>
 	
-	<div class = "h3">
+	<div>
 		<img src = "/static/images/wizard.png" align = "left" />
 		<img src = "/static/images/wizard2.png" align = "right" />
 	</div>

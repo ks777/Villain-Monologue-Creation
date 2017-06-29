@@ -11,7 +11,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 	.bg-1{
-		background-image: url('/static/images/test.jpg');
+		background-image: url('/static/images/blackhole.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		-webkit-background-size: cover;
@@ -19,17 +19,26 @@
 		-o-background-size: cover;
 		background-size: cover;
 	}
+	.h1{
+		color: #7B1C1C;
+		padding-top: 420px;
+	}
+	.buttoning{
+		background-color: #7B1C1C;
+		border: solid;
+		color: black;
+	}
 	</style>
 </head>
 <body class = "container bg-1 text-center">	
 	<h2>
 	<form method = "post" action = '/GeneratePhrase'>
-		<div>
+		<div class = "h1">
 			<label for = "title">Enter the Adjective/Word that will be used to craft this ingenius phrase: </label>
 			<input name = "title" id = "answer" type = "text"/>	
 		</div>
 		<div>
-			<button type = "submit">The Preparations are Complete! Commence Final Sequences!</button>
+			<button type = "submit" class = "buttoning">The Preparations are Complete! Commence Final Sequences!</button>
 		</div>
 	</h2>
 </body>
