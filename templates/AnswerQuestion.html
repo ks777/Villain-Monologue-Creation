@@ -2,6 +2,7 @@
 <html lang = "en" xmlns = "http://www.w3.org/1999/xhtml">
 <meta http-equiv ="Content-type" content="text/html;charset=utf-8">
 <head>
+	<link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
 	<meta charset = "utf-8" />
 	<title> Let`s get it on now! Select and Make your first pick! Let`s get it on now! 10,9,8,7,6 </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,15 +18,36 @@
 		-o-background-size: cover;
 		background-size: cover;
 	}
+	.h1{
+	position: relative;
+	right: 10px;
+	padding-top: 250px;
+	}
+	
+	.h2{
+	position: relative;
+	top: 150px;
+	}
+	
 	</style>
+	<div class = "h1">
+		<img src = "/static/images/title.png" />
+	</div>
 </head>
-<body class = "container bg-1 text-center">
-	<h2>
+
+<body class = "container-fluid bg-1 text-center">
+	<div class = "h2">
 	<form method = "get">
 		<div>
 			 <a href = {{url_for('create')}}> Proceed to the Demonstrator Fabricator Generator! </a> <br>
 		</div>
-	</h2>
+	</div>
+	
+	<div class = "h3">
+		<img src = "/static/images/wizard.png" align = "left" />
+		<img src = "/static/images/wizard2.png" align = "right" />
+	</div>
+
 </body>
 </html>
 
