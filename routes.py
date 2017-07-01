@@ -1,12 +1,10 @@
 #<input type = '<type>' name = '<name>' />
-#need cover page to link to program
-#need page for input
-#need page to use input and output answer
-#need page to give incorrect answer
+
 
 from flask import Flask, url_for, request, render_template
 from app import app
 import weaponcreation
+import website
 
 #initial page/server-side interaction
 @app.route('/')
