@@ -3,6 +3,8 @@
 #shares the same letter, and a random noun ending to produce a creation a villian would probably use.
 #Program type: simple, but will attempt to implement complex ideals like the Flask framework to create an html verion of the code
 
+#for future use: wanted to implement changing images towards the end, but decided to keep it a bit simple and move on to another project.
+#if looking to improve, improve on that.
 import random
 
 usable_words = ['atrocious', 'almighty', 'abominable',' accursed', 'astoundishing', 'amazing', 'beastly', 'breathtaking', 'barbaric', 'belligerent',
@@ -76,7 +78,7 @@ def creation_generation(word): #This was made for python originally in mind. att
             elif x == 7:
                 return("NO MORE GAMES! If my %s, %s %s can`t destroy you, then we`ll see if the city is as durable!" %(name,z,fixing))
             elif x == 8:
-                return("When they told me I could never build the most %s contraption with a hint of %s, they were right. So I just made a %s." %(name,z,fixing))
+                return("When they told me I could never build the most %s contraption with a hint of %s, they were right. So I just made some %s." %(name,z,fixing))
             elif x == 9:
                 return("The time has come to wipe this %s humanity from the face of this earth! Let our mighty army and the %s power of my own %s be the intrument of their demise!" %(name,z,fixing))
             else:
