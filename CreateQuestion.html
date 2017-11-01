@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = 'en' xmlns = "http://www.w3.org/1999/xhtml">
+<meta http-equiv ="Content-type" content="text/html;charset=utf-8">
+
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico"/>
+	<meta charset = "utf-8"/>
+	<title>Generation Commencing...</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+	.bg-1{
+		background-image: url('/static/images/blackhole.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		min-width: 150 px;
+		max-width: 100%;
+		position: relative;
+	}
+	.h1{
+		color: #7B1C1C;
+		padding-top: 420px;
+	}
+	.buttoning{
+		background-color: #7B1C1C;
+		border: solid;
+		color: black;
+	}
+	</style>
+</head>
+<body class = "container bg-1 text-center">	
+	<h2>
+	<form method = "post" action = '/GeneratePhrase'>
+		<div class = "h1">
+			<label for = "title">Enter the Adjective/Word that will be used to craft this ingenius phrase: </label>
+			<input name = "title" id = "answer" type = "text"/>	
+		</div>
+		<div>
+			<button type = "submit" class = "buttoning">The Preparations are Complete! Commence Final Sequences!</button>
+		</div>
+	</h2>
+</body>
+
+</html>

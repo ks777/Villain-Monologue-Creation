@@ -4,7 +4,7 @@
 from flask import Flask, url_for, request, render_template
 from app import app
 import weaponcreation
-import website
+#import website for future use
 
 #initial page/server-side interaction
 @app.route('/')
