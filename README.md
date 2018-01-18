@@ -8,11 +8,17 @@ The purpose of this project was to get accustomed with Python once more, after a
 
 ## Instructions
 Assuming a Command Prompt usage and you have installed the proper packages onto your system:
+
 -To start up this program, you will need to head to the project`s directory.
+
 -run venv/scripts/activate in your command prompt.
+
 -and then run app.py in the command prompt. 
+
 -To access the webpage, go to your internet browser and type Localhost:5555.
+
 -Enjoy
+
 
 
 
